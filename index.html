@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  
+  <body>
+    
+    
+    <div id="app">
+     
+      <div id="opponent">
+        <div class="characterCard">
+          {{ opponent.health }}
+          <p>{{ opponent.level }}</p>
+        </div>
+      </div><!-- #opponent End -->
+      
+      <div id="player">
+        <div class="characterCard">
+          {{ player.health }}
+          <p>{{ player.level }}</p>
+        </div>
+      </div><!-- #player End -->
+      
+      <div id="menu">
+        <ul>
+          <li v-for="attack in player">{{ player.attacks }}</li>
+        </ul>
+      </div>
+      
+    </div><!-- #app End -->
+    <script src="https://unpkg.com/vue@2.2.2"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
